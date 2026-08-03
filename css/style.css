@@ -188,6 +188,17 @@ a {
     }
 }
 
+@media(max-width:767px){
+
+    .nav-li {
+        display: none;
+    }
+
+    .nav-li.mostrar {
+        display: block;
+    }
+
+}
 
 /*hero*/
 
