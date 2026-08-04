@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbería Don Fígaro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header" id="inicio">
+    <div class="contenedor contenido-header">
+      <h1>Barbería Don Fígaro</h1>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+
+    <section class="seccion" id="servicios">
+      <h2>Nuestros servicios</h2>
+      <p>En Barbería Don Fígaro combinamos técnica clásica y estilo moderno para cuidar tu cabello y tu barba como se merecen.</p>
+      <ul class="lista-servicios">
+        <li><span>Corte clásico</span> <span class="precio">Bs 25</span></li>
+        <li><span>Perfilado de barba</span> <span class="precio">Bs 20</span></li>
+        <li><span>Corte y barba</span> <span class="precio">Bs 40</span></li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="contacto">
+      <h2>Reserva tu turno</h2>
+      <form class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="campo">
+          <label for="comentario">Tu comentario</label>
+          <textarea id="comentario" name="comentario" rows="4"></textarea>
+        </div>
+      </form>
+
+      <button type="button" id="btn-confirmar">Confirmar turno</button>
+      <p id="mensaje" class="oculto"></p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Parcial 1 - Tu Nombre Completo - 3 de agosto de 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

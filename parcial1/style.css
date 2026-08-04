@@ -1,0 +1,229 @@
+:root {
+  --primario: #8B1E23;
+  --secundario: #C9A227;
+  --negro: #1C1C1C;
+  --blanco: #FFFFFF;
+  --grisClaro: #F2EDE4;
+  --gris: #4A4A4A;
+  --fuentePrincipal: 'Poppins', sans-serif;
+  --fuenteSecundaria: 'Oswald', sans-serif;
+  --separacion: 2rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: var(--grisClaro);
+  color: var(--negro);
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--fuenteSecundaria);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin: 0;
+}
+
+.contenedor {
+  max-width: 90rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: var(--separacion) 0;
+}
+
+.contenido-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenido-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.contenido-header h1 {
+  font-size: 2.8rem;
+  color: var(--secundario);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: color .3s;
+}
+
+.nav a:hover {
+  color: var(--secundario);
+}
+
+/* Main / secciones */
+
+.principal {
+  padding: var(--separacion) 0;
+}
+
+@media (min-width: 768px) {
+  .principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.seccion {
+  background-color: var(--blanco);
+  border: 1px solid var(--grisClaro);
+  border-radius: 1rem;
+  padding: var(--separacion);
+  margin-bottom: var(--separacion);
+}
+
+@media (min-width: 768px) {
+  .seccion {
+    margin-bottom: 0;
+  }
+}
+
+.seccion h2 {
+  font-size: 2.4rem;
+  color: var(--primario);
+  margin-bottom: 1.5rem;
+}
+
+/* Lista de servicios */
+
+.lista-servicios {
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+}
+
+.lista-servicios li {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--grisClaro);
+  font-weight: 500;
+}
+
+.lista-servicios li:last-child {
+  border-bottom: none;
+}
+
+.lista-servicios .precio {
+  color: var(--primario);
+  font-weight: 700;
+}
+
+/* Formulario */
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--gris);
+  border-radius: .5rem;
+  font-family: var(--fuentePrincipal);
+  font-size: 1.5rem;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+/* Boton y mensaje */
+
+#btn-confirmar {
+  background-color: var(--primario);
+  color: var(--blanco);
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: .5rem;
+  font-family: var(--fuentePrincipal);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+#btn-confirmar:hover {
+  background-color: var(--secundario);
+  color: var(--negro);
+}
+
+#mensaje {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--secundario);
+  color: var(--negro);
+  border-radius: .5rem;
+  font-weight: 600;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 1.3rem;
+}
